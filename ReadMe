@@ -1,0 +1,4 @@
+
+
+1. To Run App 
+    : python manage.py runserver
