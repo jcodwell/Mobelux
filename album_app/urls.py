@@ -1,14 +1,13 @@
-from album_app.views import AlbumViewset
+from album_app.views import upload_photo, photo_list,new_album,album_list
 from django.urls import path, include
-from rest_framework.routers import SimpleRouter
 
 
-albumRouter = SimpleRouter()
-
-albumRouter.register(r'albums', AlbumViewset)
 
 urlpatterns = [
-    path('', include(albumRouter.urls)),
-  
+ 
+     path('photo-upload/', upload_photo, name='photo-upload'),
+     path('photos/', photo_list, name='photo-list'),
+     path('new-album/', new_album, name='album-details'),
+     path('albums/', album_list, name='album-list'),
    
 ]

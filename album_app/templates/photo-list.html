@@ -1,0 +1,10 @@
+{% csrf_token %}
+{% for photo in photos %}
+  <div>
+    <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+    <p>{{ photo.title }}</p>
+  </div>
+  {% endfor %}
+<form action="{% url 'album-details' %}" method="GET">
+  <input id="submit" type="button" value="Create An Album" />
+</form>

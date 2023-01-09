@@ -5,7 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('login/', login_view, name='login'),
-     path('login/', include('album_app.urls')),
+     path('', include('album_app.urls')),
      
   
 ]

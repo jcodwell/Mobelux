@@ -1,0 +1,13 @@
+
+{% csrf_token %}
+{% for album in albums %}
+  <div>
+    <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+    <p>{{ album.name }}</p>
+
+    {% for photo in album.photos.all %}
+    <p>{{ photo.title }}</p>
+    {% endfor %}
+  </div>
+  {% endfor %}
+  <a href="{% url 'album-details' %}" class="top-menu">Create New Album</a>

@@ -1,15 +1,13 @@
 
-
-<h1>Welcome to Album Page Creation</h1>
-
-
 {% block content %}
-    <h2>Create a New Album</h2>
+    <h2>Upload A Photo</h2>
     <form method="POST" enctype="multipart/form-data" >
         {% csrf_token %}
+
         {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
 
-    <a href="{% url 'album-list' %}" class="top-menu">View Albums</a> 
-{% endblock %}
+
+  <a href="{% url 'album-details' %}" class="top-menu">Create New Album</a>
+  {% endblock %}

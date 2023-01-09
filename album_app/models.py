@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Photo(models.Model):
-    title =   models.CharField(max_length=256, null=False)
-    image = models.ImageField(upload_to='img', null = True)
+  title = models.CharField(max_length=256, null=False)
+  image = models.ImageField()
 
 class Album(models.Model):
   name = models.CharField(max_length=256, null=False)
