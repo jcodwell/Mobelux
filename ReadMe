@@ -33,6 +33,10 @@ Approach:
          In additon, I can used classed based-view(Django Rest Framework) to reduce time/coding
          basing crud implementaions. 
          DRF also would offer a better enviroment for customizeablilty..For more complex features
+         
+         Finally, in regards to overall archetecture and scaling -> I would seperate Photo and Album to be indivdual app. As 
+         I can see new views and features being added as per a client request. Database design can also factor in the ability to scale, as 
+         a poorly design schema will become a bottleneck as the app grows. 
 
 
 
