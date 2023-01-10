@@ -2,3 +2,39 @@
 
 1. To Run App 
     : python manage.py runserver
+
+
+
+Approach: 
+ Models: 
+    Photo 
+    Album 
+    User
+    Explanation of Model Relantionships:  
+        As User I want to be able to upload many photos to an album.
+        Implementing a Many to Many relantionship, in addition each User
+        can have many Albums and as such will need a one-to-many relantionship.
+
+        For ease of implementation I used the already provided Django Admin User Model
+        to assign the current user. 
+
+        I used the default db provided by Django
+    Notes on Testing: 
+        This app features a couple of unit tests, one integration test I would included is testing
+        the functionality between album and photos.     
+
+    Future Implementation: 
+         Designing the relantionship as stated above would allow for future implemations
+         for the front-end. 
+
+         For example, In react I can fetch the API, using query param filter and render 
+         component based on logged in user
+
+         In additon, I can used classed based-view(Django Rest Framework) to reduce time/coding
+         basing crud implementaions. 
+         DRF also would offer a better enviroment for customizeablilty..For more complex features
+
+
+
+
+        

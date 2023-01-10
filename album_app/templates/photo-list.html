@@ -3,8 +3,11 @@
   <div>
     <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
     <p>{{ photo.title }}</p>
+    <form action="{% url 'remove-photo' photo.pk %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Delete Photo">
+  </form>
   </div>
   {% endfor %}
-<form action="{% url 'album-details' %}" method="GET">
-  <input id="submit" type="button" value="Create An Album" />
-</form>
+  <a href="{% url 'album-details' %}" class="top-menu">Create New Album</a>
+  <a href="{% url 'photo-upload' %}" class="top-menu">Upload photos</a>

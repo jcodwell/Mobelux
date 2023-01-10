@@ -11,5 +11,5 @@ class LoginViewTests(TestCase):
         response = self.client.post('/login/', {'username': 'testuser', 'password': 'testpass'})
        
         # Check that the user is redirected to the 'albums' view after successful login
-        self.assertRedirects(response, '/login/albums/')
+        self.assertRedirects(response, '/photo-upload/')
     

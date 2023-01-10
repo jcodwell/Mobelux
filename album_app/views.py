@@ -22,7 +22,11 @@ def upload_photo(request):
 def photo_list(request):
     photos = Photo.objects.all()
     return render(request, 'photo-list.html', {'photos': photos})
- 
+
+
+def photo_remove(request, pk):
+    photos = Photo.objects.filter(pk=pk).delete()
+    return render(request, 'photo-list.html') 
 
 def new_album(request):
     if request.method == "POST":
